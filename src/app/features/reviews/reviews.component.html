@@ -1,0 +1,77 @@
+<section id="reviews" class="px-4 md:px-8 py-16 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl md:text-4xl font-bold text-text text-center">What Clients Say</h2>
+    <p class="text-text-subtle text-center mt-2">Real stories from recent projects</p>
+
+    <div class="relative mt-8">
+      <!-- Трек -->
+      <div class="overflow-hidden rounded-2xl border border-stone-200">
+        <div
+          class="flex transition-transform duration-500 ease-out"
+          [style.transform]="'translateX(-' + (idx()*100) + '%)'"
+        >
+          <article *ngFor="let r of reviews" class="min-w-full p-6 md:p-10 bg-surface-light">
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow p-6 md:p-8">
+              <div class="flex items-center gap-4">
+                <img *ngIf="r.avatar" [src]="r.avatar" alt="{{r.name}}"
+                     class="w-12 h-12 rounded-full object-cover border border-stone-200">
+                <div>
+                  <h3 class="font-semibold text-text">{{ r.name }}</h3>
+                  <p class="text-xs text-text-subtle" *ngIf="r.city">{{ r.city }}</p>
+                </div>
+                <div class="ml-auto text-amber-500" aria-label="rating">
+                  <span *ngFor="let s of [1,2,3,4,5]; let i = index">
+                    {{ i < r.rating ? '★' : '☆' }}
+                  </span>
+                </div>
+              </div>
+
+              <p class="mt-4 text-text leading-relaxed">
+                “{{ r.text }}”
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Стрелки -->
+      <button (click)="prev()"
+              class="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10
+                     items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"
+              [class.opacity-30]="!canPrev()"
+              [disabled]="!canPrev()"
+              aria-label="Previous">
+        ‹
+      </button>
+      <button (click)="next()"
+              class="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10
+                     items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"
+              [class.opacity-30]="!canNext()"
+              [disabled]="!canNext()"
+              aria-label="Next">
+        ›
+      </button>
+
+      <!-- Точки -->
+ <div class="flex justify-center gap-2 mt-4">
+  <button
+    *ngFor="let _ of reviews; let i = index"
+    (click)="go(i)"
+    class="h-2.5 w-2.5 rounded-full transition"
+    [class.bg-primary]="idx()===i"
+    [class.bg-stone-300]="idx()!==i"
+    [attr.aria-label]="'Go to slide ' + (i + 1)"
+  ></button>
+</div>
+
+</div>
+
+
+    <div class="text-center mt-10">
+      <a href="#lead-form"
+         class="inline-block px-6 py-3 rounded-lg bg-primary hover:bg-primary-hover text-white">
+        Get a Free Measurement
+      </a>
+    </div>
+  </div>
+</section>

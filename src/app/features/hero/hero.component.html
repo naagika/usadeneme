@@ -1,0 +1,81 @@
+<section
+  id="hero"
+  class="relative bg-cover bg-center bg-no-repeat text-white"
+  style="background-image: url('assets/back.png')"
+>
+  <!-- затемнение фона -->
+  <div class="absolute inset-0 bg-black/45"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <!-- LEFT: текст -->
+      <div class="text-left space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow">
+          Your Dream Kitchen<br class="hidden md:block" />
+          Made from Solid Wood
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200">
+          Full-cycle design, measurement & installation.<br />
+          7-year warranty. Today only —
+          <span class="font-bold ">50% off</span> for the first 100 customers!
+        </p>
+
+        <a
+          href="#lead-form"
+          class="inline-block px-6 py-3 rounded-lg bg-primary hover:bg-primary-hover text-white shadow-lg transition"
+        >
+          Book a Free Appointment
+        </a>
+
+        <p class="text-sm flex items-center gap-2">
+          Free 3D visualization included
+        </p>
+      </div>
+
+      <!-- RIGHT: форма -->
+      <div id="lead-form"
+           class="bg-white/95 text-gray-900 rounded-2xl shadow-2xl p-6 md:p-8 backdrop-blur-sm">
+        <h3 class="text-xl md:text-2xl font-semibold mb-4 text-center">
+          Get 3D Design & Estimate
+        </h3>
+
+        <form [formGroup]="form" (ngSubmit)="submit()" class="space-y-4">
+          <div>
+            <label class="block text-sm mb-1 text-gray-600">Full Name*</label>
+            <input
+              type="text"
+              formControlName="name"
+              placeholder="John Smith"
+              class="w-full rounded-lg border border-stone-200 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-primary"
+            />
+            <p *ngIf="form.get('name')?.touched && form.get('name')?.invalid"
+               class="text-red-600 text-xs mt-1">Please enter your name.</p>
+          </div>
+
+          <div>
+            <label class="block text-sm mb-1 text-gray-600">Phone*</label>
+            <input
+              type="tel"
+              formControlName="phone"
+              placeholder="+1 (234) 567-8901"
+              class="w-full rounded-lg border border-stone-200 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-primary"
+            />
+            <p *ngIf="form.get('phone')?.touched && form.get('phone')?.invalid"
+               class="text-red-600 text-xs mt-1">Valid phone required.</p>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3 rounded-lg bg-primary hover:bg-primary-hover text-white font-semibold shadow-md transition"
+          >
+            Submit
+          </button>
+
+          <p class="text-[11px] text-center text-stone-500">
+            By submitting you agree to our terms & privacy policy.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
