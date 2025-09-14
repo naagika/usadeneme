@@ -19,13 +19,14 @@ export class ReviewsComponent implements OnInit, OnDestroy {
   reviews: Review[] = [
     { name: 'Emily R.', city: 'Chicago, IL', rating: 5,
       text: 'Cabinets Studio transformed our kitchen. Great quality and the 3D design helped a lot!',
-      avatar: 'assets/avatars/1.jpg' },
+      //avatar: 'assets/avatars/1.jpg' },
+      avatar: 'assets/logo.png' },
     { name: 'Jason K.', city: 'Naperville, IL', rating: 5,
       text: 'Precise measurement, professional installation, and solid wood. Highly recommend.',
-      avatar: 'assets/avatars/2.jpg' },
+      avatar: 'assets/logo.png' },
     { name: 'Megan S.', city: 'Evanston, IL', rating: 4,
       text: 'On time, clean work, and fair pricing. We love the new walnut cabinets!',
-      avatar: 'assets/avatars/3.jpg' },
+      avatar: 'assets/logo.png' },
   ];
 
   idx = signal(0);

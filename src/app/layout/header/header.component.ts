@@ -10,8 +10,31 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 isMobileMenuOpen = false;
+scrolled = false;
+currentSection: string = '';
 
-  toggleMobileMenu() {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
-  }
+toggleMobileMenu() {
+this.isMobileMenuOpen = !this.isMobileMenuOpen;
+}
+
+ngOnInit(): void {
+window.addEventListener('scroll', this.onScroll.bind(this));
+}
+
+onScroll() {
+this.scrolled = window.scrollY > 20;
+
+const sections = ['hero', 'steps', 'catalog', 'cta', 'reviews', 'faq'];
+for (const id of sections) {
+const el = document.getElementById(id);
+if (el) {
+const rect = el.getBoundingClientRect();
+if (rect.top <= 100 && rect.bottom >= 100) {
+this.currentSection = id;
+break;
+}
+}
+}
+}
+
 }
