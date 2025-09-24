@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import emailjs from '@emailjs/browser';
+
 
 @Component({
   selector: 'app-hero',
@@ -34,14 +35,15 @@ form: FormGroup;
 
     emailjs.send(
       'service_pkslsch',      // 👉 твой Service ID
-      'template_br0wh5sf',     // 👉 твой Template ID
+       'template_br0wh5s',
+      //'template_br0wh5sf',     // 👉 твой Template ID
       templateParams,
       'thn1Z3eik7UiCzDeB'     // 👉 твой Public Key
     ).then(() => {
       this.router.navigate(['/thank-you']);
     }).catch(err => {
       console.error('EmailJS error:', err);
-      alert('Ошибка отправки. Попробуйте позже.');
+      alert('Sending error. Try again later.');
     });
   
   }

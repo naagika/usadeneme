@@ -54,7 +54,7 @@ export class ReviewsComponent implements OnInit, OnDestroy {
     // автопрокрутка каждые 6 сек
     this.timer = setInterval(() => {
       this.idx.set((this.idx() + 1) % this.total);
-    }, 6000);
+    }, 3000);
   }
   ngOnDestroy() {
     clearInterval(this.timer);
