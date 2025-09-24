@@ -17,16 +17,16 @@ export class FaqComponent {
       a: 'Standard production is 3–4 weeks. Custom orders may take longer, but we always provide an exact timeline before starting.'
     },
     {
-      q: 'Do you really use solid wood?',
-      a: 'Yes, we craft cabinets from solid hardwoods like oak, walnut, and maple. No MDF in structural parts.'
+      q: 'Why is solid wood better than chipboard ?',
+      a: 'Solid wood is stronger, more durable, and longer-lasting than particleboard. It resists moisture, wear, and damage better, can be polished or repaired, and generally has a more refined appearance, whereas particleboard is cheaper but less sturdy and more prone to swelling or breaking.'
     },
     {
       q: 'Is installation included?',
       a: 'Absolutely. Delivery and professional installation are part of the package, with a 7-year warranty.'
     },
     {
-      q: 'Can I see a 3D design before ordering?',
-      a: 'Of course! Every client receives a free 3D visualization after measurement so you can preview your kitchen.'
+      q: 'How do I find out if the kitchen set fits my kitchen?',
+      a: '3D visualization design will help, it is just free from us — and it lets you clearly see how the kitchen set will fit and look in your space before making a decision.'
     }
   ];
 

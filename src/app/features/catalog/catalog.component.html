@@ -47,9 +47,14 @@
                class="flex-1 text-center px-4 py-2 rounded-lg bg-primary hover:bg-primary-hover text-white transition">
               Get a Quote
             </a>
-            <button class="px-4 py-2 rounded-lg border border-stone-200 hover:border-primary text-text-subtle">
-              Details
-            </button>
+          <button
+  class="px-4 py-2 rounded-lg border border-stone-200 hover:border-primary text-text-subtle"
+  (click)="openDetails(it)"
+>
+  Details
+</button>
+
+
           </div>
         </div>
       </article>
@@ -61,4 +66,12 @@
       </a>
     </div>
   </div>
+
+
   </section>
+<app-modal
+  [visible]="modalVisible"
+  [title]="modalTitle"
+  [text]="modalText"
+  (closed)="modalVisible=false"
+></app-modal>

@@ -1,8 +1,13 @@
-<app-header></app-header>
-<app-hero></app-hero>
-<app-steps></app-steps>
-<app-catalog></app-catalog>
-<app-cta></app-cta>
-<app-reviews></app-reviews>
-<app-faq></app-faq>
-<app-footer></app-footer>
+<ng-container *ngIf="router.url !== '/thank-you'">
+  <app-header></app-header>
+  <app-hero></app-hero>
+  <app-steps></app-steps>
+  <app-catalog></app-catalog>
+  <app-cta></app-cta>
+  <app-works></app-works>
+  <app-reviews></app-reviews>
+  <app-faq></app-faq>
+  <app-footer></app-footer>
+</ng-container>
+
+<router-outlet></router-outlet>

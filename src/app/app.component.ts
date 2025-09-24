@@ -8,14 +8,18 @@ import { CtaComponent } from "./features/cta/cta.component";
 import { ReviewsComponent } from "./features/reviews/reviews.component";
 import { FaqComponent } from "./features/faq/faq.component";
 import { FooterComponent } from "./layout/footer/footer.component";
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { WorksComponent } from './features/works/works.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HeroComponent, StepsComponent, CatalogComponent, CtaComponent, ReviewsComponent, FaqComponent, FooterComponent],
+  imports: [RouterOutlet, CommonModule, HeaderComponent, HeroComponent, StepsComponent, CatalogComponent, CtaComponent, ReviewsComponent, FaqComponent, FooterComponent, WorksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'USAProject';
+   constructor(public router: Router) {}
 }

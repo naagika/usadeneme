@@ -24,7 +24,7 @@ window.addEventListener('scroll', this.onScroll.bind(this));
 onScroll() {
 this.scrolled = window.scrollY > 20;
 
-const sections = ['hero', 'steps', 'catalog', 'cta', 'reviews', 'faq'];
+const sections = ['hero', 'steps', 'catalog', 'cta','ourworks', 'reviews', 'faq'];
 for (const id of sections) {
 const el = document.getElementById(id);
 if (el) {

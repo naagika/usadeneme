@@ -1,0 +1,29 @@
+<div
+  *ngIf="visible"
+  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+  (click)="close()"
+>
+  <div
+    class="bg-white rounded-2xl shadow-xl w-full max-w-lg mx-4 p-6 relative animate-slide-down
+           sm:mx-2 sm:rounded-xl sm:p-4"
+    (click)="$event.stopPropagation()"
+  >
+    <!-- Close button -->
+    <button
+      (click)="close()"
+      class="absolute top-3 right-3 text-text-subtle hover:text-text transition"
+    >
+      ✕
+    </button>
+
+    <!-- Title -->
+    <h2 class="text-2xl md:text-3xl font-bold text-text mb-4">
+      {{ title }}
+    </h2>
+
+    <!-- Content -->
+    <p class="text-text-subtle text-sm md:text-base leading-relaxed whitespace-pre-line">
+      {{ text }}
+    </p>
+  </div>
+</div>

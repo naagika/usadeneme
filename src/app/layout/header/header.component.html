@@ -2,8 +2,8 @@
 class="transition-all duration-300 bg-white border-b border-surface-light px-4 py-3 sm:px-8 flex justify-between items-center sticky top-0 z-50">
 <!-- Logo -->
 <div class="flex items-center gap-3">
-<img src="assets/logo.png" alt="Logo" class="h-10 w-auto" />
-<span class="text-xl font-semibold text-text">Cabinets Studio</span>
+<img src="assets/logocabinet.png" alt="Logo" class="h-10 w-auto" />
+<span class="text-xl font-semibold text-primary">Cabinets Studio</span>
 </div>
 
 <!-- Desktop Nav -->
@@ -12,9 +12,10 @@ class="transition-all duration-300 bg-white border-b border-surface-light px-4 p
 <a href="#steps" [ngClass]="{ 'text-primary font-semibold': currentSection === 'steps' }" class="hover:text-primary transition">How it Works</a>
 <a href="#catalog" [ngClass]="{ 'text-primary font-semibold': currentSection === 'catalog' }" class="hover:text-primary transition">Catalog</a>
 <a href="#cta" [ngClass]="{ 'text-primary font-semibold': currentSection === 'cta' }" class="hover:text-primary transition">Free Quote</a>
+<a href="#ourworks" [ngClass]="{ 'text-primary font-semibold': currentSection === 'ourworks' }" class="hover:text-primary transition">Our Works</a>
 <a href="#reviews" [ngClass]="{ 'text-primary font-semibold': currentSection === 'reviews' }" class="hover:text-primary transition">Reviews</a>
 <a href="#faq" [ngClass]="{ 'text-primary font-semibold': currentSection === 'faq' }" class="hover:text-primary transition">FAQ</a>
-<a href="tel:+12345678901" class="text-primary hover:text-primary-hover underline">Call</a>
+<a href="tel:+1 (312) 350-5832" class="text-primary hover:text-primary-hover underline">Call</a>
 </nav>
 
 <!-- Mobile Burger -->
@@ -27,8 +28,9 @@ class="absolute top-full left-0 w-full bg-white shadow-md md:hidden flex flex-co
 <a href="#steps" class="py-3 px-4 hover:bg-gray-100 transition" (click)="toggleMobileMenu()">How it Works</a>
 <a href="#catalog" class="py-3 px-4 hover:bg-gray-100 transition" (click)="toggleMobileMenu()">Catalog</a>
 <a href="#cta" class="py-3 px-4 hover:bg-gray-100 transition" (click)="toggleMobileMenu()">Free Quote</a>
+<a href="#ourworks" class="py-3 px-4 hover:bg-gray-100 transition" (click)="toggleMobileMenu()">Our Works</a>
 <a href="#reviews" class="py-3 px-4 hover:bg-gray-100 transition" (click)="toggleMobileMenu()">Reviews</a>
 <a href="#faq" class="py-3 px-4 hover:bg-gray-100 transition" (click)="toggleMobileMenu()">FAQ</a>
-<a href="tel:+12345678901" class="py-3 px-4 text-primary hover:bg-gray-100 transition font-medium" (click)="toggleMobileMenu()">Call Us</a>
+<a href="tel:+1 (312) 350-5832" class="py-3 px-4 text-primary hover:bg-gray-100 transition font-medium" (click)="toggleMobileMenu()">Call Us</a>
 </div>
 </header>
